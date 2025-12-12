@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos de Robótica - Solicitud</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .hero img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #5a6fd8;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Proyectos de Robótica</h1>
+        <p>Innova con nosotros. Elige tu tarjeta de desarrollo y describe tu proyecto para enviar una solicitud.</p>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <img src="https://via.placeholder.com/600x300/667eea/ffffff?text=Rob%C3%B3tica+Innovadora" alt="Imagen de robótica">
+            <p>¡Bienvenido! Selecciona las tarjetas de desarrollo que necesitas y detalla tu idea. Te notificaremos por email si tu solicitud es aceptada.</p>
+        </div>
+
+        <form action="https://formspree.io/f/mblnpebk" method="POST">
+            <label for="tarjetas">Selecciona las tarjetas de desarrollo (puedes elegir varias):</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="tarjetas" value="Arduino"> Arduino</label>
+                <label><input type="checkbox" name="tarjetas" value="Raspberry Pi"> Raspberry Pi</label>
+                <label><input type="checkbox" name="tarjetas" value="ESP32"> ESP32</label>
+            </div>
+
+            <label for="descripcion">Describe tu proyecto (detalles, objetivos, etc.):</label>
+            <textarea id="descripcion" name="descripcion" rows="5" placeholder="Ejemplo: Quiero construir un robot autónomo para navegación en entornos urbanos..." required></textarea>
+
+            <label for="email">Correo electrónico (para notificaciones):</label>
+            <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+
+            <button type="submit">Enviar Solicitud</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Proyectos de Robótica. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
